@@ -13,9 +13,11 @@ Feature: DELETE request
       | name   | string | {generatedName}  |
       | gender | string | male             |
       | status | string | active           |
+
     * make POST request on URL "{base.url}/{url.path}" with headers and parameters from table and save response by key "1"
       | ACCESS_TOKEN | Authorization | {auth.token} |
       | BODY         | {jsonBody}    | {jsonBody}   |
+
     * response "1" have status code in body 201
     * in response body "1" value by JsonPath "$.data.name" equals "{generatedName}" with type "string"
     * in response body "1" value by JsonPath "$.data.email" equals "{generatedEmail}" with type "string"
