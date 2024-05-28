@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
 @Slf4j
 public class VariableManager {
 
-    private static String replacePattern = "\\{([^{}]+)\\}";
+    private static String replacePattern = "\\{([^{}]+)}";
 
     public static String replaceValues(String value) {
         log.debug("Search for variable replace {}", value);
